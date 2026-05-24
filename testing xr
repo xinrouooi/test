@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Xin Rou | Portfolio 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?
+family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;600&display=swap"
+rel="stylesheet">
+<style>
+:root {
+--bg-color: #F9F6F1; /* 米白色背景 */
+--text-dark: #1A1A1A;
+--text-muted: #7A7267;
+--accent-line: #D1CDC7;
+--white: #FFFFFF;
+}
+*
+{ margin: 0; padding: 0; box-sizing: border-box; }
+body {
+-
+background-color: var(--bg-color);
+color: var(--text-dark);
+font-family: 'Montserrat', sans-serif;
+line-height: 1.6;
+webkit-font-smoothing: antialiased;
+}
+h1, h2, h3, .serif {
+font-family: 'Playfair Display', serif;
+font-weight: 400;
+text-transform: uppercase;
+letter-spacing: 2px;
+}
+.container { max-width: 1300px; margin: 0 auto; padding: 0 40px; }
+/* --- Navigation --- */
+nav {
+padding: 40px 0;
+display: flex;
+justify-content: space-between;
+align-items: center;
+border-bottom: 1px solid var(--accent-line);
+}
+.nav-links { display: flex; gap: 40px; font-size: 12px; letter-spacing: 2px; }
+/* --- Hero Section --- */
+.hero {
+padding: 80px 0;
+text-align: center;
+position: relative;
+}
+.hero-title {
+font-size: clamp(3rem, 10vw, 8rem);
+line-height: 0.9;
+margin-bottom: -20px;
+z-index: 2;
+position: relative;
+}
+.hero-arch-container {
+width: 400px;
+height: 550px;
+margin: 0 auto;
+background-color: #eee;
+border-radius: 200px 200px 0 0; /* 拱形设计 */
+overflow: hidden;
+border: 1px solid var(--accent-line);
+}
+.hero-arch-container img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+.hero-tagline {
+margin-top: 30px;
+font-style: italic;
+color: var(--text-muted);
+font-family: 'Playfair Display', serif;
+}
+/* --- About Section --- */
+.section-padding { padding: 120px 0; }
+.grid-about {
+display: grid;
+grid-template-columns: 1.2fr 0.8fr;
+gap: 100px;
+align-items: center;
+}
+.label {
+font-size: 12px;
+color: var(--text-muted);
+display: block;
+margin-bottom: 20px;
+letter-spacing: 3px;
+}
+.about-text h2 { font-size: 3rem; margin-bottom: 30px; line-height: 1.2; }
+.about-text p { font-size: 1.1rem; margin-bottom: 20px; font-weight: 300; }
+.about-image-frame {
+position: relative;
+padding: 20px;
+border: 1px solid var(--accent-line);
+}
+.about-image-frame img { width: 100%; display: block; }
+/* --- My Work Grid --- */
+.work-header {
+display: flex;
+justify-content: space-between;
+align-items: flex-end;
+margin-bottom: 60px;
+border-bottom: 1px solid var(--accent-line);
+padding-bottom: 20px;
+}
+.work-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 30px;
+}
+.work-item { text-decoration: none; color: inherit; }
+.work-item .img-box {
+aspect-ratio: 4/5;
+overflow: hidden;
+background-color: #fff;
+margin-bottom: 20px;
+border: 1px solid var(--accent-line);
+transition: 0.5s;
+}
+.work-item:hover .img-box { transform: translateY(-10px); }
+.work-item img { width: 100%; height: 100%; object-fit: cover; }
+.work-item h3 { font-size: 1.2rem; margin-bottom: 5px; text-transform: none; letter-
+spacing: 1px; }
+.work-item p { font-size: 0.8rem; color: var(--text-muted); }
+/* --- Skills & Logic Section --- */
+.logic-section {
+background-color: var(--white);
+padding: 100px 40px;
+margin: 100px 0;
+}
+.logic-grid {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 40px;
+text-align: center;
+}
+.logic-item h4 { font-size: 0.9rem; margin-bottom: 10px; color: var(--text-muted); }
+.logic-item span { font-family: 'Playfair Display', serif; font-size: 1.5rem; }
+/* --- Quote Area --- */
+.quote-area {
+text-align: center;
+}
+max-width: 800px;
+margin: 0 auto;
+padding: 100px 0;
+.quote-area h2 { font-style: italic; text-transform: none; font-size: 2rem; margin-bottom:
+30px; }
+/* --- Footer --- */
+footer {
+padding: 80px 0;
+border-top: 1px solid var(--accent-line);
+display: flex;
+justify-content: space-between;
+align-items: center;
+.footer-socials a {
+text-decoration: none;
+color: var(--text-dark);
+font-size: 12px;
+margin-left: 30px;
+letter-spacing: 1px;
+}
+}
+/* Responsive */
+@media (max-width: 900px) {
+.grid-about, .work-grid, .logic-grid { grid-template-columns: 1fr; }
+.hero-arch-container { width: 300px; height: 400px; }
+.hero-title { font-size: 4rem; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+<nav>
+<div class="logo serif">Xin Rou</div>
+<div class="nav-links">
+<span>PORTFOLIO</span>
+<span>ABOUT</span>
+<span>TRANSITION</span>
+<span>CONTACT</span>
+</div>
+</nav>
+<section class="hero">
+<h1 class="hero-title">PORT—<br>FOLIO</h1>
+<div class="hero-arch-container">
+<img src="./images/hero_arch.jpg" alt="Art of Life">
+</div>
+<p class="hero-tagline">Art of Life | Transitioning from Logic to Freedom</p>
+</section>
+<section class="section-padding">
+<div class="grid-about">
+<div class="about-text">
+<span class="label">ABOUT ME</span>
+<h2>A transition from the structural logic of Procurement to Visual Design.
+</h2>
+<p>Dedicated and resourceful electronic components buyer with 4+ years'
+experience. My transition to design is not a departure from logic, but an application of it.</p>
+<p>I use <strong>Systematic Procurement Thinking</strong> to source visual
+elements and build cohesive brand narratives.</p>
+</div>
+<div class="about-image-frame">
+<img src="./images/about_me.jpg" alt="Xin Rou Profile">
+</div>
+</div>
+</section>
+<div class="logic-section">
+<div class="logic-grid">
+<div class="logic-item">
+<h4>SYSTEMS</h4>
+<span>SAP / ERP (95%)</span>
+</div>
+<div class="logic-item">
+<h4>FINANCE</h4>
+<span>MRP Logic (90%)</span>
+</div>
+<div class="logic-item">
+<h4>COLLAGE</h4>
+<span>Visual Art (85%)</span>
+</div>
+<div class="logic-item">
+<h4>BRANDING</h4>
+<span>Identity (80%)</span>
+</div>
+</div>
+</div>
+<section class="section-padding">
+<div class="work-header">
+<h2 class="serif">Selected Works</h2>
+<span class="label">2024 — 2026</span>
+</div>
+<div class="work-grid">
+<div class="work-item">
+<div class="img-box">
+<img src="./images/project1.jpg" alt="Escapism">
+</div>
+<h3>The "Escapism" Chapter</h3>
+<p>Digital Collage / Personal Project</p>
+</div>
+<div class="work-item">
+<div class="img-box">
+<img src="./images/project2.jpg" alt="Bonjour Cafe">
+</div>
+<h3>Bonjour Cafe Branding</h3>
+<p>Artisanal Identity / Vintage Concept</p>
+</div>
+<div class="work-item">
+<div class="img-box">
+<img src="./images/project3.jpg" alt="Museum Ticket">
+</div>
+<h3>Art Exhibition Ticket</h3>
+<p>Minimalist Design / Layout Optimization</p>
+</div>
+</div>
+</section>
+<section class="quote-area">
+<span class="label">MY PERSPECTIVE</span>
+<h2>"In design, as in procurement, every choice must be deliberate, and every resource
+must be optimized for the final vision."</h2>
+<p style="letter-spacing: 2px; font-size: 14px;">BUYER'S LOGIC + CREATIVE SOUL</p>
+</section>
+<footer>
+<div class="serif" style="font-size: 1.5rem;">Let's Connect</div>
+<div class="footer-socials">
+<a href="mailto:xinrouooi27@gmail.com">EMAIL</a>
+<a href="https://linkedin.com/in/xin-rou-ooi-ab2ba6236">LINKEDIN</a>
+<a href="tel:+60162615270">PHONE</a>
+</div>
+</footer>
+</div>
+</body>
+</html>
